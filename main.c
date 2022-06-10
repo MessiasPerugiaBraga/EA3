@@ -5,7 +5,12 @@
 
 int main(void)
 {
-
+    printf("Digite uma mensagem: \n");
+    scanf("");
+    printf("Digite a letra que deseja ser substituida: \n")
+    scanf("");
+    printf("Digite o caractere pelo qual deve ser substituido: \n");
+    scanf("");
     /*Retangulo r1 = {1.5, 3.0}, r2 = {4.0, 5.0};
     Circulo c1, c2;
     double p, a;

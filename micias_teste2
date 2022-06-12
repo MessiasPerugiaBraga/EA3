@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+     
+
+int main()
+{  
+     char msg[50];
+     //char msg_saida [50];
+     int j = 0;
+     char texto[30];
+     char nova[30];
+     int i;
+       
+     printf("informe um texto;\n");
+     gets(texto);
+     printf("informe a letra que sera substituida\n");
+     gets(msg);
+
+     for (int i = 0; i < strlen(texto); i ++)
+     {
+         if(msg[j]==texto[i])
+        
+        {
+             printf("Tem A na posicao%d\n",i);
+
+             printf("informe a proxima letra\n");
+             gets(nova);
+            
+        for(int j = 0; j < strlen(nova); j ++){
+        
+            texto[i]=nova[j];
+            
+            printf("letra trocada %s\n",texto);
+        } 
+        }
+     }
+     return 0;
+}

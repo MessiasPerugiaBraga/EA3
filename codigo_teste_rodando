@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct {
+    char mensagem[30];
+    char letra_selecionada[1];
+    char nova_letra[1];
+    char nova_mensagem[30];
+}Mensagem;
+
+Mensagem msg[1], lSelec[1], nLetra[1], nova_msg[1];
+
+/*void numElemVetor (Mensagem* msg, int numElemVet)
+{
+    
+
+    return;
+}*/
+
+int main(void)
+{
+
+int j = 0;
+int conTrocas = 0;
+
+for (int i = 0; i < 1; i++)
+{
+    strcpy(msg[1].mensagem, "NULL");
+    strcpy(lSelec[1].letra_selecionada, "NULL");
+    strcpy(nLetra[1].nova_letra, "NULL");
+    strcpy(nova_msg[1].nova_mensagem, "NULL");
+
+}
+
+for (int i =0; i < 1; i++)
+{
+    printf("Digite sua mensagem: \n");
+    scanf("%s%*c", &msg[i].mensagem);
+    printf("Digite o caracter que deseja substituir:\n");
+    scanf("%s%*c", &lSelec[i].letra_selecionada);
+    printf("Digite o novo caracter que sera alocado:\n");
+    scanf("%s%*c", &nLetra[i].nova_letra);
+    //printf("Sua mensagem digitada foi:\n%s", msg[i].mensagem);
+    //printf("\nSeu caracter selecionado para substituir:\n%s", lSelec[i].letra_selecionada);
+    //printf("\nSeu caracter alocado:\n%s", nLetra[i].nova_letra);
+}
+
+for (int i = 0; i < strlen(msg->mensagem); i ++)
+{
+    nova_msg->nova_mensagem[i] = msg->mensagem[i];
+
+    if(lSelec->letra_selecionada[j] == msg->mensagem[i])
+    {
+        conTrocas++;
+        
+        for(int j = 0; j < strlen(nLetra->nova_letra); j ++)
+        {
+            msg->mensagem[i] = nLetra->nova_letra[j];
+            nova_msg->nova_mensagem[i] = nLetra->nova_letra[j];
+        } 
+    }
+}
+
+printf("\nMensagem com a letra trocada: %s\n",nova_msg->nova_mensagem);
+printf("\nNumeros de trocas realizadas pela funcao: %d\n", conTrocas);
+printf("\nNumero de elementos do vetor: %d\n", strlen(msg->mensagem));
+
+    return 0;
+}

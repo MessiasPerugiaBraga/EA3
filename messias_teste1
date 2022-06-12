@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct {
+    char mensagem[30];
+    char letra_selecionada[1];
+    char nova_letra[1];
+}Mensagem;
+
+Mensagem msg[1], lSelec[1], nLetra[1]; // 
+
+int main(void)
+{
+//Mensagem* troca;
+//char aux[10];
+int j = 0;
+
+for (int i = 0; i < 1; i++)
+{
+    strcpy(msg[1].mensagem, "NULL");
+    strcpy(lSelec[1].letra_selecionada, "NULL");
+    strcpy(nLetra[1].nova_letra, "NULL");
+}
+
+for (int i =0; i < 1; i++)
+{
+    printf("Digite sua mensagem: \n");
+    scanf("%s%*c", &msg[i].mensagem);
+    printf("Digite o caracter que deseja substituir:\n");
+    scanf("%s%*c", &lSelec[i].letra_selecionada);
+    printf("Digite o novo caracter que sera alocado:\n");
+    scanf("%s%*c", &nLetra[i].nova_letra);
+    printf("Sua mensagem digitada foi:\n%s", msg[i].mensagem);
+    printf("\nSeu caracter selecionado para substituir:\n%s", lSelec[i].letra_selecionada);
+    printf("\nSeu caracter alocado:\n%s", nLetra[i].nova_letra);
+}
+
+for (int i = 0; i < strlen(msg->mensagem); i ++)
+{
+    if(lSelec->letra_selecionada[j] == msg->mensagem[i])
+    {
+        printf("\nTem essa letra na posicao%d\n", i);
+
+        printf("informe a proxima letra\n");
+        gets(nLetra->nova_letra);
+            
+        for(int j = 0; j < strlen(nLetra->nova_letra); j ++)
+        {
+            msg->mensagem[i] = nLetra->nova_letra[j];   
+            printf("letra trocada %s\n",msg->mensagem);
+        } 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*void TrocaFonte(tCircuitos* f, float nFont)
+{
+    f -> font = f -> font = nFont;
+}*/
+//mensagem -> troca = mensagem -> troca = aux;
+//for (int i =0; i < 1; i++)
+//{ 
+//printf("\nSeu aux:\n%s", aux[i]);
+//}
+
+//strcpy (aux.mensagem, msg->mensagem);
+//printf("aux recebeu: %s ", aux.mensagem);
+
+/*for (int i = 0; i < strlen(msg[i].mensagem); i++)
+    {
+        if (msg[i].mensagem == lSelec[i].letra)
+       {
+            printf("tem z na possicao %d \n", i);
+            //msg_saida[j].mensagem_saida = msg[i].mensagem;
+            j++;
+        }
+    }*/
+
+    //printf("infome um texto: \n");
+    //gets(msg);
+
+   //for (int i = 0; i < strlen(msg); i++)
+   // {
+
+   //     if (msg[i] == 'Z')
+  //      {
+  //          printf("tem z na possicao %d \n", i);
+  //          msg_saida[j] = 'Z';
+  //          j++;
+  //      }
+   // }
+    return 0;
+}

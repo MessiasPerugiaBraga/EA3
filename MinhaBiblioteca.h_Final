@@ -1,0 +1,13 @@
+#ifndef _MINHABIBLIOTECA_H
+#define _MINHABIBLIOTECA_H
+
+typedef struct {
+    char mensagem[30];
+    char letra_selecionada[1];
+    char nova_letra[1];
+    char nova_mensagem[30];
+}Mensagem;
+
+void fim();
+void fim();
+#endif
